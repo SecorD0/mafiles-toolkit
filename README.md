@@ -12,7 +12,7 @@
     - [Windows](#Windows)
     - [Source code](#Source-code)
 - [Functions](#Functions)
-    - [Find maFiles by account logins and/or SteamID64s](#Find-maFiles-by-account-logins-and-or-SteamID64s)
+    - [Find maFiles by account logins and/or SteamID64s](#Find-maFiles-by-account-logins-andor-SteamID64s)
     - [Name maFiles as logins](#Name-maFiles-as-logins)
     - [Name maFiles as SteamID64s](#Name-maFiles-as-SteamID64s)
     - [Add maFiles to the manifest](#Add-maFiles-to-the-manifest)
