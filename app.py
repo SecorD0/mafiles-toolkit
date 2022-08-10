@@ -15,6 +15,7 @@ def main():
             print('[V] A folder for maFiles was created, put the necessary files in it!')
             return
 
+        manifest_path = absolute_path(maFiles, 'manifest.json')
         mafiles = glob.glob(absolute_path(maFiles, '*.maFile'))
         if not mafiles:
             print('[!] The maFiles folder is empty, fill it up!')
@@ -31,7 +32,8 @@ def main():
         if s == 1:
             with open(find_it) as f:
                 lines = f.readlines()
-                accounts = {line.rstrip().replace('https://steamcommunity.com/profiles/', '').lower(): '' for line in lines}
+                accounts = {line.rstrip().replace('https://steamcommunity.com/profiles/', '').lower(): '' for line in
+                            lines}
 
             if not accounts:
                 print(f'[!] The {find_it} is empty, specify logins and/or SteamID64s!')
@@ -82,7 +84,21 @@ def main():
                     print(f'[V] {mafile} -> {new_path}')
 
         elif s == 4:
-            manifest = json.load(open(absolute_path(maFiles, 'manifest.json')))
+            if os.path.exists(manifest_path):
+                manifest = json.load(open(manifest_path))
+
+            else:
+                manifest = {
+                    "encrypted": False,
+                    "first_run": False,
+                    "entries": [],
+                    "periodic_checking": False,
+                    "periodic_checking_interval": 20,
+                    "periodic_checking_checkall": False,
+                    "auto_confirm_market_transactions": False,
+                    "auto_confirm_trades": False
+                }
+
             imported = [entry['steamid'] for entry in manifest['entries']]
             for mafile in mafiles:
                 try:
@@ -105,7 +121,11 @@ def main():
                 json.dump(manifest, f, ensure_ascii=False, separators=(',', ':'))
 
         elif s == 5:
-            manifest = json.load(open(absolute_path(maFiles, 'manifest.json')))
+            if not os.path.exists(manifest_path):
+                print('[!] There is no the manifest.json file in the maFiles directory!')
+                return
+
+            manifest = json.load(open(manifest_path))
             imported = {entry['steamid']: entry for entry in manifest['entries']}
             existing = []
             for mafile in mafiles:

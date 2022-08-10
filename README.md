@@ -170,7 +170,7 @@ Press Enter to exit
 
 <h2><p align="center">Add maFiles to the manifest</p></h2>
 
-⠀It takes all maFiles and adds them to the manifest, if not already added.
+⠀It takes all maFiles and adds them to the manifest, if not already added. It creates the `manifest.json` file automatically if there is no source one in the maFiles folder.
 
 ⠀Example output:
 ```
