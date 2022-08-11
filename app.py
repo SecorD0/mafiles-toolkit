@@ -29,6 +29,15 @@ def main():
 (5) Exclude non-existent maFiles from the manifest
 > '''
         s = int(input(text))
+    except ValueError:
+        print("[!] The entered text isn't a number!")
+        return
+
+    except:
+        logging.exception('[!] Something went wrong!')
+        return
+
+    try:
         if s == 1:
             with open(find_it) as f:
                 lines = f.readlines()
@@ -55,7 +64,7 @@ def main():
                         os.rename(mafile, new_path)
                         accounts[SteamID64] = new_path
                 except:
-                    pass
+                    print(f"[!] Couldn't read the file: {mafile}")
 
             for account in accounts:
                 mafile = accounts[account]
@@ -67,21 +76,27 @@ def main():
 
         elif s == 2:
             for mafile in mafiles:
-                content = json.load(open(mafile))
-                if 'account_name' in content:
-                    login = content['account_name']
-                    new_path = absolute_path(processed, f'{login}.maFile')
-                    os.rename(mafile, new_path)
-                    print(f'[V] {mafile} -> {new_path}')
+                try:
+                    content = json.load(open(mafile))
+                    if 'account_name' in content:
+                        login = content['account_name']
+                        new_path = absolute_path(processed, f'{login}.maFile')
+                        os.rename(mafile, new_path)
+                        print(f'[V] {mafile} -> {new_path}')
+                except:
+                    print(f"[!] Couldn't read the file: {mafile}")
 
         elif s == 3:
             for mafile in mafiles:
-                content = json.load(open(mafile))
-                if 'Session' in content and 'SteamID' in content['Session']:
-                    SteamID64 = content["Session"]["SteamID"]
-                    new_path = absolute_path(processed, f'{SteamID64}.maFile')
-                    os.rename(mafile, new_path)
-                    print(f'[V] {mafile} -> {new_path}')
+                try:
+                    content = json.load(open(mafile))
+                    if 'Session' in content and 'SteamID' in content['Session']:
+                        SteamID64 = content["Session"]["SteamID"]
+                        new_path = absolute_path(processed, f'{SteamID64}.maFile')
+                        os.rename(mafile, new_path)
+                        print(f'[V] {mafile} -> {new_path}')
+                except:
+                    print(f"[!] Couldn't read the file: {mafile}")
 
         elif s == 4:
             if os.path.exists(manifest_path):
@@ -115,7 +130,7 @@ def main():
                             })
                         os.rename(mafile, absolute_path(processed, f'{SteamID64}.maFile'))
                 except:
-                    pass
+                    print(f"[!] Couldn't read the file: {mafile}")
 
             with open(absolute_path(processed, 'manifest.json'), 'w') as f:
                 json.dump(manifest, f, ensure_ascii=False, separators=(',', ':'))
@@ -141,7 +156,7 @@ def main():
                             print(f'[V] {SteamID64} was deleted from the manifest')
                             manifest['entries'].remove(imported[SteamID64])
                 except:
-                    pass
+                    print(f"[!] Couldn't read the file: {mafile}")
 
             entries = manifest['entries'].copy()
             for entry in manifest['entries']:
@@ -157,10 +172,6 @@ def main():
 
         else:
             print('[!] There is no such function!')
-
-    except ValueError:
-        logging.exception('hi')
-        print("[!] The entered text isn't a number!")
 
     except:
         logging.exception('[!] Something went wrong!')
