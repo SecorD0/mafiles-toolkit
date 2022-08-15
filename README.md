@@ -46,7 +46,7 @@
 - `maFiles` — a directory with maFiles for interaction;
 - `processed` — a directory with maFiles processed by the program;
 - `find_it.txt` — a text file with logins and/or SteamID64 to be found;
-- `maFiles_Toolkit.exe` / `app.py` — an executable file that runs the program.
+- `maFiles-toolkit.exe` / `app.py` — an executable file that runs the program.
 
 <h1><p align="center">How to run</p></h1>
 <p align="right"><a href="#Content">To the content</a></p>
@@ -91,7 +91,7 @@ Press Enter to exit
 
 ⠀If you want to build the EXE file by yourself, use the command:
 ```sh
-pyinstaller app.py -F -n maFiles_Toolkit -i images/icon.ico
+pyinstaller app.py -F -n maFiles-toolkit -i images/icon.ico
 ```
 
 <h1><p align="center">Functions</p></h1>
