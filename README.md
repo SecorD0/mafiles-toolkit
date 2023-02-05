@@ -1,7 +1,7 @@
 <h1><p align="center">maFiles Toolkit</p></h1>
 
 
-<p align="center"><img src="images/icon.ico" width="400"></p>
+<p align="center"><img src="images/icons/app.ico" width="400"></p>
 
 <h1><p align="center">Content</p></h1>
 
@@ -35,7 +35,7 @@
 <h1><p align="center">Useful links</p></h1>
 <p align="right"><a href="#Content">To the content</a></p>
 
-⠀[maFiles Toolkit](https://github.com/SecorD0/mafiles-toolkit)
+⠀[mafiles-toolkit](https://github.com/SecorD0/mafiles-toolkit)
 
 ⠀[SDA official repository](https://github.com/Jessecar96/SteamDesktopAuthenticator)
 
@@ -91,7 +91,7 @@ Press Enter to exit
 
 ⠀If you want to build the EXE file by yourself, use the command:
 ```sh
-pyinstaller app.py -F -n maFiles-toolkit -i images/icon.ico
+pyinstaller app.py -Fn mafiles-toolkit -i images/icons/app.ico --add-binary "images/icons;images/icons"
 ```
 
 <h1><p align="center">Functions</p></h1>
@@ -118,10 +118,10 @@ Select a function:
 (4) Add maFiles to the manifest
 (5) Exclude non-existent maFiles from the manifest
 > 1
-[V] Wilman_33 was found: C:\Users\Me\Desktop\maFiles Toolkit\processed\wilman_33.maFile
-[V] 76561198018854190 was found: C:\Users\Me\Desktop\maFiles Toolkit\processed\76561198018854190.maFile
-[V] onroeni was found: C:\Users\Me\Desktop\maFiles Toolkit\processed\onroeni.maFile
-[V] 76561198007602847 was found: C:\Users\Me\Desktop\maFiles Toolkit\processed\76561198007602847.maFile
+[V] Wilman_33 was found: C:\Users\Me\Desktop\mafiles-toolkit\processed\wilman_33.maFile
+[V] 76561198018854190 was found: C:\Users\Me\Desktop\mafiles-toolkit\processed\76561198018854190.maFile
+[V] onroeni was found: C:\Users\Me\Desktop\mafiles-toolkit\processed\onroeni.maFile
+[V] 76561198007602847 was found: C:\Users\Me\Desktop\mafiles-toolkit\processed\76561198007602847.maFile
 
 Press Enter to exit
 ```
@@ -139,10 +139,10 @@ Select a function:
 (4) Add maFiles to the manifest
 (5) Exclude non-existent maFiles from the manifest
 > 2
-[V] C:\Users\Me\Desktop\maFiles Toolkit\processed\wilman_33.maFile -> C:\Users\Me\Desktop\maFiles Toolkit\processed\wilman_33.maFile
-[V] C:\Users\Me\Desktop\maFiles Toolkit\processed\76561198018854190.maFile -> C:\Users\Me\Desktop\maFiles Toolkit\processed\ymanjiv.maFile
-[V] C:\Users\Me\Desktop\maFiles Toolkit\processed\onroeni.maFile -> C:\Users\Me\Desktop\maFiles Toolkit\processed\onroeni.maFile
-[V] C:\Users\Me\Desktop\maFiles Toolkit\processed\76561198007602847.maFile -> C:\Users\Me\Desktop\maFiles Toolkit\processed\o40dysi.maFile
+[V] C:\Users\Me\Desktop\mafiles-toolkit\processed\wilman_33.maFile -> C:\Users\Me\Desktop\mafiles-toolkit\processed\wilman_33.maFile
+[V] C:\Users\Me\Desktop\mafiles-toolkit\processed\76561198018854190.maFile -> C:\Users\Me\Desktop\mafiles-toolkit\processed\ymanjiv.maFile
+[V] C:\Users\Me\Desktop\mafiles-toolkit\processed\onroeni.maFile -> C:\Users\Me\Desktop\mafiles-toolkit\processed\onroeni.maFile
+[V] C:\Users\Me\Desktop\mafiles-toolkit\processed\76561198007602847.maFile -> C:\Users\Me\Desktop\mafiles-toolkit\processed\o40dysi.maFile
 
 Press Enter to exit
 ```
@@ -160,10 +160,10 @@ Select a function:
 (4) Add maFiles to the manifest
 (5) Exclude non-existent maFiles from the manifest
 > 3
-[V] C:\Users\Me\Desktop\maFiles Toolkit\processed\wilman_33.maFile -> C:\Users\Me\Desktop\maFiles Toolkit\processed\76561198081830472.maFile
-[V] C:\Users\Me\Desktop\maFiles Toolkit\processed\76561198018854190.maFile -> C:\Users\Me\Desktop\maFiles Toolkit\processed\76561198018854190.maFile
-[V] C:\Users\Me\Desktop\maFiles Toolkit\processed\onroeni.maFile -> C:\Users\Me\Desktop\maFiles Toolkit\processed\76561197997019522.maFile
-[V] C:\Users\Me\Desktop\maFiles Toolkit\processed\76561198007602847.maFile -> C:\Users\Me\Desktop\maFiles Toolkit\processed\76561198007602847.maFile
+[V] C:\Users\Me\Desktop\mafiles-toolkit\processed\wilman_33.maFile -> C:\Users\Me\Desktop\mafiles-toolkit\processed\76561198081830472.maFile
+[V] C:\Users\Me\Desktop\mafiles-toolkit\processed\76561198018854190.maFile -> C:\Users\Me\Desktop\mafiles-toolkit\processed\76561198018854190.maFile
+[V] C:\Users\Me\Desktop\mafiles-toolkit\processed\onroeni.maFile -> C:\Users\Me\Desktop\mafiles-toolkit\processed\76561197997019522.maFile
+[V] C:\Users\Me\Desktop\mafiles-toolkit\processed\76561198007602847.maFile -> C:\Users\Me\Desktop\mafiles-toolkit\processed\76561198007602847.maFile
 
 Press Enter to exit
 ```
