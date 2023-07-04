@@ -129,6 +129,4 @@ dmypy.json
 .pyre/
 
 # User files
-maFiles
-processed
-find_it.txt
+files/
