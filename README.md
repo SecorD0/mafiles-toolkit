@@ -232,9 +232,9 @@ Press Enter to exit.
 > 2
 
 04.07.2023 21:26:13 | [V] | wilman_33 | maFile was renamed: C:\Users\Me\Desktop\mafiles-toolkit\files\processed\wilman_33.maFile -> C:\Users\Me\Desktop\mafiles-toolkit\files\processed\wilman_33.maFile
-04.07.2023 21:26:13 | [V] | 76561198018854190 | maFile was renamed: C:\Users\Me\Desktop\mafiles-toolkit\files\processed\76561198018854190.maFile -> C:\Users\Me\Desktop\mafiles-toolkit\files\processed\ymanjiv.maFile
+04.07.2023 21:26:13 | [V] | ymanjiv | maFile was renamed: C:\Users\Me\Desktop\mafiles-toolkit\files\processed\76561198018854190.maFile -> C:\Users\Me\Desktop\mafiles-toolkit\files\processed\ymanjiv.maFile
 04.07.2023 21:26:13 | [V] | onroeni | maFile was renamed: C:\Users\Me\Desktop\mafiles-toolkit\files\processed\ONROENI.maFile -> C:\Users\Me\Desktop\mafiles-toolkit\files\processed\onroeni.maFile
-04.07.2023 21:26:13 | [V] | 76561198007602847 | maFile was renamed: C:\Users\Me\Desktop\mafiles-toolkit\files\processed\76561198007602847.maFile -> C:\Users\Me\Desktop\mafiles-toolkit\files\processed\o40dysi.maFile
+04.07.2023 21:26:13 | [V] | o40dysi | maFile was renamed: C:\Users\Me\Desktop\mafiles-toolkit\files\processed\76561198007602847.maFile -> C:\Users\Me\Desktop\mafiles-toolkit\files\processed\o40dysi.maFile
 04.07.2023 21:26:13 | [V] | 4 maFiles were renamed.
 
 Press Enter to exit.
