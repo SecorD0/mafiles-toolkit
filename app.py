@@ -11,6 +11,7 @@ from functions.name_as_logins import name_as_logins
 from functions.name_as_steamid64s import name_as_steamid64s
 
 if __name__ == '__main__':
+    print(f'\nSoftware version: {config.GREEN}{config.VERSION}{config.RESET_ALL}\n')
     create_files()
     login_dict, _ = get_mafile_dicts()
     if login_dict:

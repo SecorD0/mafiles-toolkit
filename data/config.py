@@ -35,3 +35,5 @@ ERRORS_FILE = os.path.join(FILES_DIR, 'errors.log')
 FIND_IT_FILE = os.path.join(FILES_DIR, 'find_it.txt')
 MANIFEST_FILE = os.path.join(MAFILES_DIR, 'manifest.json')
 PROCESSED_MANIFEST_FILE = os.path.join(PROCESSED_DIR, 'manifest.json')
+
+VERSION = '2.0.3'
