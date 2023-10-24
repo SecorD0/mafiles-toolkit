@@ -9,7 +9,7 @@ from utils.print_to_log import print_to_log
 
 def find():
     accounts = read_lines(path=config.FIND_IT_FILE, skip_empty_rows=True)
-    accounts = [account.replace('https://steamcommunity.com/profiles/', '').lower() for account in accounts]
+    accounts = list(set([account.replace('https://steamcommunity.com/profiles/', '').lower() for account in accounts]))
     if not accounts:
         print(
             f'\n{config.RED}[X] The {config.FIND_IT_FILE} file is empty, '
