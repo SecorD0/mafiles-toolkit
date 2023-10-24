@@ -20,18 +20,22 @@ def find():
     found = 0
     login_dict, s64_dict = get_mafile_dicts()
     for account in accounts:
-        new_path = os.path.join(config.PROCESSED_DIR, f'{account}.maFile')
-        if account in login_dict or account in s64_dict:
-            if account in login_dict:
-                os.rename(login_dict[account], new_path)
+        try:
+            new_path = os.path.join(config.PROCESSED_DIR, f'{account}.maFile')
+            if account in login_dict or account in s64_dict:
+                if account in login_dict:
+                    os.rename(login_dict[account], new_path)
+
+                else:
+                    os.rename(s64_dict[account], new_path)
+
+                found += 1
+                print_to_log(text=f'maFile was found: {new_path}', status='[V]', login_or_s64=account)
 
             else:
-                os.rename(s64_dict[account], new_path)
+                print_to_log(text="maFile wasn't found!", status='[!]', login_or_s64=account)
 
-            found += 1
-            print_to_log(text=f'maFile was found: {new_path}', status='[V]', login_or_s64=account)
-
-        else:
-            print_to_log(text="maFile wasn't found!", status='[!]', login_or_s64=account)
+        except BaseException as e:
+            print_to_log(text=f'Something went wrong: {e}', status='[X]', login_or_s64=account)
 
     print_to_log(text=f'{found}/{len(accounts)} maFiles were found.', status='[V]')
